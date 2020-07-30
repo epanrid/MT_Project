@@ -16,12 +16,6 @@ os_passwd_perms:
   group: root
   mode: '0644'
 
-
-# Set the SELinux state, can be either disabled, permissive, or enforcing.
-os_selinux_state: enforcing
-# Set the SELinux polixy.
-os_selinux_policy: targeted
-
 # Reboot role
 reboot:
   msg: "Reboot initiated by Ansible"
