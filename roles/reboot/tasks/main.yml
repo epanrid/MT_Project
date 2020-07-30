@@ -14,3 +14,4 @@
   shell: uptime
 - 
   debug: "msg={{UPTIME_POST_REBOOT.stdout}}"
+
