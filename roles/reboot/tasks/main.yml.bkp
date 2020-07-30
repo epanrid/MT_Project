@@ -1,0 +1,9 @@
+---
+- name: Reboot host and wait for it to restart
+  reboot:
+    msg: '{{ reboot.msg }}'
+    connect_timeout: '{{ reboot.connect_timeout }}'
+    reboot_timeout: '{{ reboot.reboot_timeout }}'
+    pre_reboot_delay: '{{ reboot.pre_reboot_delay }}'
+    post_reboot_delay: '{{ reboot.post_reboot_delay }}'
+    test_command: '{{ reboot.test_command }}'
