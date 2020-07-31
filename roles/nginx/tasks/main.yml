@@ -1,0 +1,22 @@
+---
+
+   -name: Instal Nginx pre-requisites - epel-release
+     yum:
+        name: epel-release
+        state: present
+   -name: Install nginx
+     yum:
+        name: nginx
+        update_cache: yes
+        state: present
+   -name: Create nginx /etc/nginx/conf.d
+    file:
+       path: /etc/nginx/conf.d
+       state: directory
+       mode: 0755
+   -name: copy nginx config file to /etc/nginx/conf.d
+    copy: src=files/nginx.conf dest=/etc/nginx/conf.d
+   -name: copy index.html
+    copy: src=files/index.html dest=/usr/share/nginx/html/index.html mode=0644
+   -name: restart nginx
+    service: name=nginx state=retarted

@@ -7,3 +7,5 @@
   - { role: minimize_access, tags: 'Changes' }
   - { role: rhosts, tags: 'security'}
   - { role: apt, tags: 'security'}
+  - { role: revert, tags: 'rollback' }
+
