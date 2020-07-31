@@ -20,10 +20,3 @@
     group: 'root'
     mode: '0750'
   when: '"change_user" not in os_security_users_allow'
-
--
-  name: "Check Permission"
-  register: "PERMISSION"
-  shell: 'll /etc/passwd'
--
-  debug: "msg={{PERMISSION.stdout}}"
